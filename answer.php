@@ -30,14 +30,22 @@
       <div class="right-image">
         <img src="./images/volume-of-sphere.png" alt="volume of sphere" />
       </div>
-      <p>Formula</p>
-      <br />
-      <p>V = 4/3πr³</p>
-      <br />
-      <p>Please enter integers for radius:</p>
-      <br />
-    </div>
-  </main>
+      <div class="page-content-php">
+        <div id="user-info">
+          <?php
+          $radiusOfSphere = $_GET["radius"];
+          // process
+          $volume = 4 / 3 * M_PI * $radiusOfSphere ** 3;
+          $roundNumber = round($volume, 3);
+          // output
+          echo "If the radius is " . $radiusOfSphere . ", the volume of the sphere is " . $roundNumber . " mm³.";
+          ?>
+          <div class="page-content-answer">
+            <a href="./index.php">Return</a>
+          </div>
+        </div>
+    </main>
+  </div>
 </body>
 
 </html>
